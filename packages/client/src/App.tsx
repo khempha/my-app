@@ -1,18 +1,13 @@
-import { useState, useEffect } from 'react';
-
-
+import { useState, useEffect } from "react";
 
 function App() {
-  const [message , setMessage] = useState('');
-  useEffect(() => {
-  fetch('/api/hello/')
-    .then(res => res.json())
-    .then(data => setMessage(data.message))
-    
-}, []);
-return <p className='font-bold'>{message}</p>  
-
+   const [message, setMessage] = useState("");
+   useEffect(() => {
+      fetch("/api/hello/")
+         .then((res) => res.json())
+         .then((data) => setMessage(data.message));
+   }, []);
+   return <p className="font-bold">{message}</p>;
 }
 
-
-export default App
+export default App;
